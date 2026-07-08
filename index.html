@@ -160,22 +160,17 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
+<!-- Map Hover Effect -->
 <script>
-const hotspots = document.querySelectorAll('.map-hotspot');
-const mapImg = document.querySelector('.map-image');
+const mapImage = document.querySelector('.map-point');
+const mapWrapper = document.getElementById('mapWrapper');
+const mapImg = document.querySelector('#mapWrapper img');
 
-// Add hover effect for each hotspot
-hotspots.forEach(area => {
-  area.addEventListener('mouseover', () => {
-    mapImg.style.filter = 'brightness(1.15) saturate(1.3)';
-    mapImg.style.boxShadow = '0 0 30px rgba(247, 145, 169, 0.8)';
-    document.body.style.cursor = 'pointer';
-  });
-  area.addEventListener('mouseout', () => {
-    mapImg.style.filter = 'brightness(1) saturate(1)';
-    mapImg.style.boxShadow = '0 0 20px rgba(247, 145, 169, 0.5)';
-    document.body.style.cursor = 'default';
-  });
+mapImg.addEventListener('mouseover', () => {
+  mapImg.style.filter = 'brightness(1.1)';
+});
+mapImg.addEventListener('mouseout', () => {
+  mapImg.style.filter = 'brightness(1)';
 });
 </script>
 
