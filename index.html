@@ -4,81 +4,123 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ExploreEasy Travel & Tours | Home</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
 </head>
 <body>
 
-  <!-- Navigation Bar with Dropdown -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">ExploreEasy</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="services.html">Travel Packages</a></li>
-              <li><a class="dropdown-item" href="services.html#art">Art Collections</a></li>
-              <li><a class="dropdown-item" href="services.html#promos">Promos & Discounts</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+<!-- Dropdown Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-nav sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="images/logo.png" alt="ExploreEasy Logo" width="45" height="45" class="rounded-circle">
+      <span>ExploreEasy</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu custom-dropdown">
+            <li><a class="dropdown-item" href="services.html">Travel Packages</a></li>
+            <li><a class="dropdown-item" href="services.html#art">Art Collections</a></li>
+            <li><a class="dropdown-item" href="services.html#promos">Promos & Discounts</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sliding Images / Carousel -->
+<div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/home-banner.jpg" class="d-block w-100" alt="Travel Adventure">
+      <div class="carousel-caption bg-overlay rounded p-3">
+        <h2>ExploreEasy Travel & Tours</h2>
+        <p>Turning your travel dreams into reality</p>
       </div>
     </div>
-  </nav>
-
-  <!-- Hero Banner with Gradient & Opacity -->
-  <header class="hero-section text-center text-white">
-    <div class="container py-5">
-      <h1 class="display-4 fw-bold mb-3">ExploreEasy Travel & Tours</h1>
-      <p class="lead mb-4">Turning your travel dreams into reality since February 2025</p>
-      <a href="services.html" class="btn btn-primary btn-lg rounded-pill">View Our Packages</a>
-    </div>
-  </header>
-
-  <!-- Welcome Section -->
-  <section class="container my-5">
-    <div class="row">
-      <div class="col-md-8">
-        <h2>Your Adventure Starts Here</h2>
-        <p>Whether exploring ancient ruins, relaxing on pristine beaches, or immersing yourself in vibrant cultures — we make it happen.</p>
-        <p>From booking flights and accommodations to arranging guided tours and local transportation, we handle all the details so you can focus on enjoying your trip.</p>
+    <div class="carousel-item">
+      <img src="images/beach1.jpg" class="d-block w-100" alt="Pristine Beaches">
+      <div class="carousel-caption bg-overlay rounded p-3">
+        <h2>Relax on Beautiful Shores</h2>
+        <p>Unwind and enjoy nature’s beauty</p>
       </div>
-      <div class="col-md-4">
-        <div class="card shadow rounded-3">
-          <div class="card-body bg-light">
-            <h5 class="card-title text-primary">Latest Offer</h5>
-            <p class="card-text">✅ <strong>10% Early Bird Discount</strong> when booking 6 months in advance!</p>
-            <p class="card-text">👨‍👩‍👧‍👦 Special savings for family & group packages</p>
-          </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/culture.jpg" class="d-block w-100" alt="Cultural Experience">
+      <div class="carousel-caption bg-overlay rounded p-3">
+        <h2>Immerse in New Cultures</h2>
+        <p>Create memories that last forever</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Main Content -->
+<section class="container my-5">
+  <div class="row">
+    <div class="col-md-8 float-md-start"> <!-- CSS Float used here -->
+      <h2 class="text-heading">Welcome to ExploreEasy</h2>
+      <p>Established in February 2025, located in Looc, Dumaguete City, Negros Oriental. Our mission: <em>"To unfold the dreams of people ready to embark on the adventure of a lifetime into reality."</em></p>
+      <p>We arrange flights, accommodations, guided tours, and local transportation — so you just focus on enjoying your trip. We also offer tailor-made packages to match your interests.</p>
+    </div>
+    <div class="col-md-4 float-md-end"> <!-- CSS Float used here -->
+      <div class="card custom-card shadow">
+        <div class="card-body">
+          <h5 class="card-title">🔥 Special Offers</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">✅ 10% Early Bird Discount</li>
+            <li class="list-group-item">👨‍👩‍👧‍👦 Family & Group Savings</li>
+            <li class="list-group-item">🎨 Exclusive Art Collections</li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Footer with Site Map & Developer Info -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container">
-      <p><strong>Site Map:</strong>
-        <a href="index.html" class="text-light">Home</a> |
-        <a href="about.html" class="text-light">About Us</a> |
-        <a href="services.html" class="text-light">Services & Packages</a> |
-        <a href="contact.html" class="text-light">Contact</a>
-      </p>
-      <p>Developed by: Rhyss Riona Maliel Crispo | IT130L Web Design Project</p>
-      <p class="small">© 2025 ExploreEasy Travel & Tours. Used for academic purposes only.</p>
-    </div>
-  </footer>
+  <!-- Image Map -->
+  <div class="mt-5 text-center">
+    <h4 class="text-heading">📍 Explore Popular Destinations</h4>
+    <img src="images/map-philippines.jpg" alt="Philippines Map" usemap="#destMap" class="img-fluid rounded shadow" style="max-width:750px;">
+    <map name="destMap">
+      <area shape="rect" coords="50,50,180,150" href="services.html#cebu" alt="Cebu Tours">
+      <area shape="circle" coords="300,120,60" href="services.html#dumaguete" alt="Dumaguete Tours">
+      <area shape="poly" coords="420,60,480,130,400,180" href="services.html#palawan" alt="Palawan Tours">
+    </map>
+    <p class="text-muted small">Click locations on the map to view packages</p>
+  </div>
+</section>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer -->
+<footer class="custom-footer py-4">
+  <div class="container">
+    <p><strong>Site Map:</strong>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="services.html">Services & Packages</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>Developed by: Rhyss Riona Maliel Crispo | IT130L Web Design Project</p>
+    <p class="small">© 2025 ExploreEasy Travel & Tours | For academic purposes only</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>

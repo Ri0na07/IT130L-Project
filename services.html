@@ -6,96 +6,123 @@
   <title>Services & Packages | ExploreEasy</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">ExploreEasy</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Services</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#travel">Travel Packages</a></li>
-              <li><a class="dropdown-item" href="#art">Art Collections</a></li>
-              <li><a class="dropdown-item" href="#promos">Promos & Discounts</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <section class="container my-5">
-    <h2 class="text-center mb-5 text-primary">Our Services & Packages</h2>
-
-    <div id="travel" class="mb-5">
-      <h4>✈️ Travel & Tour Services</h4>
-      <table class="table table-striped table-hover shadow rounded-3 overflow-hidden">
-        <thead class="table-dark">
-          <tr>
-            <th>Service</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Flight & Hotel Booking</td>
-            <td>Best rates for domestic and international flights and accommodations</td>
-          </tr>
-          <tr>
-            <td>Guided Tours</td>
-            <td>Visit ancient ruins, beaches, and cultural sites with expert guides</td>
-          </tr>
-          <tr>
-            <td>Transport Arrangement</td>
-            <td>Comfortable and safe local transportation during your trip</td>
-          </tr>
-          <tr>
-            <td>Tailor-Made Packages</td>
-            <td>Customized itineraries designed exactly for your interests and schedule</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div id="art" class="mb-5">
-      <h4>🎨 Art Collections</h4>
-      <p>We also curate and offer beautiful art collections inspired by local culture and nature — perfect for collectors and lovers of fine craftsmanship.</p>
-      <div class="bg-light p-4 rounded-3 border-gradient shadow-sm">
-        <p>Contact us to view our latest collection and prices.</p>
-      </div>
-    </div>
-
-    <div id="promos" class="bg-primary bg-opacity-10 p-4 rounded-3 shadow">
-      <h4>🎁 Current Promos & Discounts</h4>
-      <ul>
-        <li><strong>Early Bird Discount:</strong> Book 6 months in advance → <strong>10% OFF</strong> on select tours</li>
-        <li><strong>Family & Group Rates:</strong> Special savings when booking for 4 or more persons</li>
-        <li><strong>Free consultation:</strong> We help you plan your trip at no extra cost!</li>
+<nav class="navbar navbar-expand-lg navbar-dark custom-nav sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="images/logo.png" alt="ExploreEasy Logo" width="45" height="45" class="rounded-circle">
+      <span>ExploreEasy</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu custom-dropdown">
+            <li><a class="dropdown-item" href="#travel">Travel Packages</a></li>
+            <li><a class="dropdown-item" href="#art">Art Collections</a></li>
+            <li><a class="dropdown-item" href="#promos">Promos & Discounts</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
-  </section>
+  </div>
+</nav>
 
-  <footer class="bg-dark text-white py-4">
-    <div class="container">
-      <p><strong>Site Map:</strong>
-        <a href="index.html" class="text-light">Home</a> |
-        <a href="about.html" class="text-light">About Us</a> |
-        <a href="services.html" class="text-light">Services & Packages</a> |
-        <a href="contact.html" class="text-light">Contact</a>
-      </p>
-      <p>Developed by: Rhyss Riona Maliel Crispo | IT130L Web Design Project</p>
+<section class="container my-5">
+  <h2 class="text-center text-heading mb-5">Our Services & Offers</h2>
+
+  <!-- Services Table -->
+  <div id="travel" class="mb-5">
+    <h4>✈️ Travel Services</h4>
+    <table class="custom-table table table-hover rounded shadow-sm">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Flight & Hotel Booking</td>
+          <td>Best rates for domestic and international trips</td>
+        </tr>
+        <tr>
+          <td>Guided Tours</td>
+          <td>Visit beaches, mountains, and heritage sites</td>
+        </tr>
+        <tr>
+          <td>Transportation</td>
+          <td>Safe and comfortable travel transfers</td>
+        </tr>
+        <tr>
+          <td>Custom Packages</td>
+          <td>Plan your trip exactly how you want it</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Art Section -->
+  <div id="art" class="mb-5 p-4 custom-gradient rounded shadow">
+    <h4>🎨 Art Collections</h4>
+    <p>We feature handmade paintings, crafts, and artworks inspired by local culture and nature — perfect for collectors and home decor.</p>
+  </div>
+
+  <!-- Promos -->
+  <div id="promos" class="p-4 promo-box rounded shadow">
+    <h4>🎁 Current Promos</h4>
+    <ul>
+      <li><strong>Early Bird:</strong> Book 6 months ahead → <strong>10% OFF</strong></li>
+      <li><strong>Family Rate:</strong> Save more when booking for 4+ persons</li>
+      <li><strong>Free Consultation:</strong> We help plan your trip for free</li>
+    </ul>
+  </div>
+
+  <!-- Image Gallery + Lightbox Pop-ups -->
+  <div class="mt-5">
+    <h4 class="text-center mb-4">📸 Gallery</h4>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <a href="images/beach1.jpg" data-lightbox="gallery" data-title="Tropical Beach">
+          <img src="images/beach1.jpg" alt="Beach" class="gallery-img rounded shadow">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="images/mountain.jpg" data-lightbox="gallery" data-title="Mountain Adventure">
+          <img src="images/mountain.jpg" alt="Mountain" class="gallery-img rounded shadow">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="images/art1.jpg" data-lightbox="gallery" data-title="Local Artwork">
+          <img src="images/art1.jpg" alt="Art" class="gallery-img rounded shadow">
+        </a>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="custom-footer py-4">
+  <div class="container">
+    <p><strong>Site Map:</strong>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About Us</a> |
+      <a href="services.html">Services & Packages</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>Developed by: Rhyss Riona Maliel Crispo | IT130L Web Design Project</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
